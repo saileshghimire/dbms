@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #011627;
+    font-family: sans-serif;
+    
+}
+
+.search_body{
+    margin: 1%;
+    padding: 1%;
+}

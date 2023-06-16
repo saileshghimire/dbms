@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+{% block title %}Delete{% endblock title %}
+
+{% block content %}
+<form method="get">
+    {% csrf_token %}
+    <label>Delete by Name:</label>
+    <input type="text", name="keyword">
+    <button class="btn btn-outline-success" type="submit">Delete</button> 
+</form> 
+<hr>
+{% endblock content %}

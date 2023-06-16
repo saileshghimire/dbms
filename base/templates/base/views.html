@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+{% block title %} view{% endblock title %} Search
+
+{% block content %}
+<h1>view</h1>
+<hr>
+{% if rows %}
+<table class="table">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Firstname</th>
+        <th scope="col">Middlename</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Rollnumber</th>
+        <th scope="col">Phonenumber</th>
+        <th scope="col">DateofBirth</th>
+        <th scope="col">Email</th>
+        <th scope="col">Fathername</th>
+        <th scope="col">Mothername</th>
+        <th scope="col">DateOfAdmission</th>
+        <th scope="col">Fees</th>
+    </tr>
+    {% for row in rows %}
+    <tr scope="row">
+        <td>{{ row.0 }}</td>
+        <td>{{ row.1 }}</td>
+        <td>{{ row.2 }}</td>
+        <td>{{ row.3 }}</td>
+        <td>{{ row.4 }}</td>
+        <td>{{ row.5 }}</td>
+        <td>{{ row.6 }}</td>
+        <td>{{ row.7 }}</td>
+        <td>{{ row.8 }}</td>
+        <td>{{ row.9 }}</td>
+        <td>{{ row.10 }}</td>
+        <td>{{ row.11 }}</td>  
+        <td>{{ row.12 }}</td> 
+        <td><a href="{% url 'update' id=row.0 %}">Update</a></td>
+    </tr>
+    {% endfor %}
+</table>
+ {% else %}
+    <p>No results found.</p>
+{% endif %} 
+{% endblock content %}
